@@ -45,7 +45,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2.0
 go install bitbucket.org/liamstask/goose/cmd/goose@latest
 go install golang.org/x/tools/cmd/stringer@latest
 go install github.com/letsencrypt/pebble/cmd/pebble-challtestsrv@master
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.47.1
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.48
 
 go clean -cache
 go clean -modcache
