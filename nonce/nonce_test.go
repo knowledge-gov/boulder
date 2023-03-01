@@ -154,6 +154,11 @@ func (mnc *malleableNonceClient) Nonce(ctx context.Context, in *emptypb.Empty, o
 	return nil, errors.New("unimplemented")
 }
 
+type stubNonceClient struct {
+	valid bool
+	err   error
+}
+
 func TestRemoteRedeem(t *testing.T) {
 	valid, err := RemoteRedeem(context.Background(), nil, "q")
 	test.AssertNotError(t, err, "RemoteRedeem failed")
