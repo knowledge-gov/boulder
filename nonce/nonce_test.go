@@ -159,6 +159,12 @@ type stubNonceClient struct {
 	err   error
 }
 
+// TODO(Phil):
+// Hoist up the prefixMap Redeemers into 3 distinct nonce clients instead of the
+// malleable once client
+// AlwaysRedeemSuccessful
+// AlwaysFailsToNonce
+// AlwaysErrors
 func TestRemoteRedeem(t *testing.T) {
 	valid, err := RemoteRedeem(context.Background(), nil, "q")
 	test.AssertNotError(t, err, "RemoteRedeem failed")
