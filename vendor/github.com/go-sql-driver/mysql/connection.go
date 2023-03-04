@@ -75,7 +75,9 @@ func (mc *mysqlConn) handleParams() (err error) {
 				cmdSet.WriteByte(' ')
 			}
 			cmdSet.WriteString(param)
+			cmdSet.WriteByte(' ')
 			cmdSet.WriteByte('=')
+			cmdSet.WriteByte(' ')
 			cmdSet.WriteString(val)
 		}
 	}
